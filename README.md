@@ -1,46 +1,21 @@
- # ----- Edit these Variables for your own Use Case ----- #
-$PASSWORD_FOR_USERS   = "Password1"
-$NUMBER_OF_ACCOUNTS_TO_CREATE = 10000
-# ------------------------------------------------------ #
+<h1>Hi, I'm Alejandro, an <a href="https://www.linkedin.com/in/alejandro-ceja">IT Professional</a>☺</h1>
 
-Function generate-random-name() {
-    $consonants = @('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z')
-    $vowels = @('a','e','i','o','u','y')
-    $nameLength = Get-Random -Minimum 3 -Maximum 7
-    $count = 0
-    $name = ""
+<h2>👨‍💻 Information Technology Projects:</h2>
 
-    while ($count -lt $nameLength) {
-        if ($($count % 2) -eq 0) {
-            $name += $consonants[$(Get-Random -Minimum 0 -Maximum $($consonants.Count - 1))]
-        }
-        else {
-            $name += $vowels[$(Get-Random -Minimum 0 -Maximum $($vowels.Count - 1))]
-        }
-        $count++
-    }
+- <b>osTicket (Help Desk Ticketing System)</b>
+  - [osTicket: Prerequisites and Installation](https://github.com/joshmadakorcc/osticket-prereqs)
+  - [osTicket: Post-Installation Configuration](https://github.com/joshmadakorcc/post-install-config)
+  - [osTicket: Ticket Lifecycle Examples](https://github.com/joshmadakorcc/ticket-lifecycle)
+- <b>Microsoft Azure</b>
+  - [Configuring On-premises Active Directory within Azure VMs](https://github.com/joshmadakorcc/configure-ad)
+  - [Network Security Groups (NSGs) and Inspecting Network Protocols](https://github.com/joshmadakorcc/azure-network-protocols)
 
-    return $name
+<h2>🤳Connect with me:</h2>
 
-}
+[<img align="left" alt="Josh | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
+[<img align="left" alt="Josh | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="Josh | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
 
-$count = 1
-while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
-    $fisrtName = generate-random-name
-    $lastName = generate-random-name
-    $username = $fisrtName + '.' + $lastName
-    $password = ConvertTo-SecureString $PASSWORD_FOR_USERS -AsPlainText -Force
 
-    Write-Host "Creating user: $($username)" -BackgroundColor Black -ForegroundColor Cyan
-    
-    New-AdUser -AccountPassword $password `
-               -GivenName $firstName `
-               -Surname $lastName `
-               -DisplayName $username `
-               -Name $username `
-               -EmployeeID $username `
-               -PasswordNeverExpires $true `
-               -Path "ou=_EMPLOYEES,$(([ADSI]`"").distinguishedName)" `
-               -Enabled $true
-    $count++
-}
+[instagram]: https://www.instagram.com/Josh
+[linkedin]: https://www.linkedin.com/in/alejandro-ceja
