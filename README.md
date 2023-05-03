@@ -14,4 +14,4 @@
 
 [<img align="left" alt="Josh | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 
-[linkedin]: linkedin.com/in/alejandro-ceja-2577751b1
+[linkedin]:linkedin.com/in/alejandro-ceja-2577751b1
